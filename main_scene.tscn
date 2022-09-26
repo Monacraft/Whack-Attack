@@ -2,10 +2,17 @@
 
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_61ydb"]
 [ext_resource type="PackedScene" uid="uid://u43iv0kk1vj3" path="res://Scenes/player.tscn" id="2_lsesa"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://dfl3edwxyeklw" path="res://Scenes/hole.tscn" id="2_pbq3g"]
+=======
+[ext_resource type="PackedScene" uid="uid://3ip0n6faw043" path="res://Scenes/target.tscn" id="3_adsoc"]
+>>>>>>> Stashed changes
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_61ydb")
 hole_scene = ExtResource("2_pbq3g")
 
 [node name="Player" parent="." instance=ExtResource("2_lsesa")]
+
+[node name="Target" parent="." instance=ExtResource("3_adsoc")]
+position = Vector2(567, 704)

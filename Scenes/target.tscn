@@ -1,5 +1,15 @@
-[gd_scene format=3 uid="uid://3ip0n6faw043"]
+[gd_scene load_steps=3 format=3 uid="uid://3ip0n6faw043"]
+
+[ext_resource type="Script" path="res://Scripts/target.gd" id="1_n1x7x"]
+[ext_resource type="Texture2D" uid="uid://b044xua7b36ae" path="res://Sprites/goblin.png" id="2_ghbap"]
 
 [node name="Target" type="Area2D"]
+script = ExtResource("1_n1x7x")
 
-[node name="Sprite2d" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ghbap")
+
+[node name="CollisionPolygon2d" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(16, -34.7, 16, -32.9, 25, -24.9, 25, -22.5, 28.2, -16, 33.1, -16, 54, -13.8, 54, -11.8, 58, -7.8, 58, 2, 55.9, 2, 41, 15.9, 41, 18.6, 46, 31.6, 46, 42, 49, 69.9, 49, 72.6, 41.1, 85, 34, 85, -17, 86, -17, 85, -24, 85, -24, 83.4, -37, 78.4, -37, 76.9, -46, 68.9, -46, 33.4, -46.7, 30, -59.9, 30, -68, 20.8, -68, 17, -69, -16, -67.5, -16, -65.5, -23, -63.8, -23, -58.8, -28, -47.6, -28, -33, -21.9, -17.8, -36, -15.1, -36, -10, -37.5, -10, -39.4)
+
+[connection signal="input_event" from="." to="." method="_on_target_input_event"]
