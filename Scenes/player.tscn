@@ -14,9 +14,16 @@ animations = [{
 [node name="Player" type="Node2D"]
 script = ExtResource("1_i251c")
 
-[node name="Sprite2d" type="AnimatedSprite2D" parent="."]
-position = Vector2(216, -96)
+[node name="HammerSprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(256, -72)
 rotation = -0.698132
 scale = Vector2(1, 1)
 frames = SubResource("SpriteFrames_5u8wc")
 animation = &"Default"
+centered = false
+offset = Vector2(-128, -300)
+
+[node name="Swing" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Swing" to="." method="_on_swing_timeout"]

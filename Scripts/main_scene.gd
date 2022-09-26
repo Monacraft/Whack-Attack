@@ -11,9 +11,9 @@ const height : int = 100
 var holes = []
 
 func _ready():
-	for x in range(3):
+	for x in range(4):
 		holes.append([])
-		for y in range(4):
+		for y in range(3):
 			holes[x].append(hole_scene.instantiate())
 			holes[x][y].position = Vector2(x * width, y * height)
 
