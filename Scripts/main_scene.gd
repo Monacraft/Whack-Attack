@@ -14,8 +14,8 @@ func _ready():
 	for x in range(3):
 		holes.append([])
 		for y in range(4):
-			holes[x].append(hole_scene.instance())
-			holes.position = Vector2(x * width, y * height)
+			holes[x].append(hole_scene.instantiate())
+			holes[x][y].position = Vector2(x * width, y * height)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

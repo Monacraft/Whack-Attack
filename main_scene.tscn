@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxp82nvyksrs1"]
+[gd_scene load_steps=4 format=3 uid="uid://dxp82nvyksrs1"]
 
 [ext_resource type="Script" path="res://Scripts/main_scene.gd" id="1_61ydb"]
 [ext_resource type="PackedScene" uid="uid://u43iv0kk1vj3" path="res://Scenes/player.tscn" id="2_lsesa"]
+[ext_resource type="PackedScene" uid="uid://dfl3edwxyeklw" path="res://Scenes/hole.tscn" id="2_pbq3g"]
 
 [node name="Main Scene" type="Node2D"]
 script = ExtResource("1_61ydb")
+hole_scene = ExtResource("2_pbq3g")
 
 [node name="Player" parent="." instance=ExtResource("2_lsesa")]
